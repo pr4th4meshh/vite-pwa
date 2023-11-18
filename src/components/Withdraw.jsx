@@ -1,6 +1,7 @@
 import "../App.css"
 import { useDispatch, useSelector } from "react-redux"
 import { minus, reset } from "../WalletSlice"
+import { Link } from "react-router-dom"
 
 function Withdraw() {
   const dispatch = useDispatch()
@@ -47,12 +48,17 @@ function Withdraw() {
               </button>
             )}
           </div>
+          <div>
+            <Link to="/">
+            <button>Go back &larr;</button>
+            </Link>
           <button
             onClick={resetWallet}
             className="bg-[#291711] text-white py-1 px-2 rounded-md w-full "
           >
             Reset
           </button>
+          </div>
         </div>
       </div>
     </>
