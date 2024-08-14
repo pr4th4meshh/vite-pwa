@@ -1,6 +1,7 @@
 import "./App.css"
 import { useDispatch, useSelector } from "react-redux"
 import { add, minus, reset } from "./WalletSlice"
+import image from "../src/assets/image.png"
 
 function App() {
   const dispatch = useDispatch()
@@ -20,6 +21,7 @@ function App() {
     <>
       <div className="bg-[#291711] h-screen w-full flex justify-center items-center ">
         <div className="bg-[#8DDCA4] h-[500px] w-[400px] relative place-self-center border-[1px] rounded-lg p-3 ">
+          <img src={image} />
           <h1 className="text-[32px] flex justify-center mb-2 ">
             Wallet Balance: ₹{amount}
           </h1>
